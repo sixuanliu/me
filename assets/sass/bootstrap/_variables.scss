@@ -1,0 +1,285 @@
+// Modified from Bootstrap
+
+// Variables
+// --------------------------------------------------
+
+
+// Global values
+// --------------------------------------------------
+
+
+// Grays
+// -------------------------
+$black:                 #000 !default;
+$gray-darker:           #222 !default;
+$gray-dark:             #333 !default;
+$gray:                  #555 !default;
+$gray-light:            #999 !default;
+$gray-lighter:          #eee !default;
+$white:                 #fff !default;
+
+
+// Accent colors
+// -------------------------
+$blue:                  #167edd !default;
+$blue-dark:             #0059ac !default;
+$green:                 #40aa04 !default;
+$red:                   #c22    !default;
+$yellow:                #ffe841 !default;
+$orange:                #ff9f10 !default;
+$pink:                  #e04187 !default;
+$purple:                #ab44d3 !default;
+
+
+// Scaffolding
+// -------------------------
+$body-background:       white !default;
+$text-color:            $gray-dark !default;
+
+
+// Links
+// -------------------------
+$link-color:            $blue !default;
+$link-color-hover:      darken($link-color, 10%) !default;
+
+
+// Typography
+// -------------------------
+$sans-font-family:      "Open Sans", Arial, sans-serif !default;
+$serif-font-family:     "URW Palladio L", Palatino, "Palatino Linotype", Georgia, serif !default;
+$mono-font-family:      "DejaVu Sans Mono", Menlo, Consolas, monospace !default;
+
+$base-font-size:        14px !default;
+$base-font-family:      $sans-font-family !default;
+$base-line-height:      24px !default;
+$alt-font-family:       $serif-font-family !default;
+
+$headings-font-family:  inherit !default; // empty to use BS default, $base-font-family
+$headings-font-weight:  normal !default;
+$headings-color:        inherit !default; // empty to use BS default, $text-color
+
+
+// Component sizing
+// -------------------------
+$padding-large:         ($base-line-height / 4) 14px !default;
+$padding-small:         0 9px !default;
+$padding-mini:          0 6px !default;
+
+$base-border-radius:    4px !default;
+$border-radius-large:   6px !default;
+$border-radius-small:   3px !default;
+
+
+// Tables
+// -------------------------
+$table-background:                  transparent !default; // overall background-color
+$table-background-accent:           #f1f1f1 !default; // for striping
+$table-background-hover:            #e4e4e4 !default; // for hover
+$table-border:                      #ddd !default; // table and cell border
+
+
+// Buttons
+// -------------------------
+$btn-background:                    $white !default;
+$btn-background-hover:              darken($white, 4%) !default;
+
+$btn-primary-background:            $blue !default;
+$btn-primary-background-hover:      darken($btn-primary-background, 6%) !default;
+
+$btn-info-background:               #1fafd3 !default;
+$btn-info-background-hover:         darken($btn-info-background, 6%) !default;
+
+$btn-success-background:            $green !default;
+$btn-success-background-hover:      darken($btn-success-background, 5%) !default;
+
+$btn-warning-background:            $orange !default;
+$btn-warning-background-hover:      darken($btn-warning-background, 6%) !default;
+
+$btn-danger-background:             $red !default;
+$btn-danger-background-hover:       darken($btn-danger-background, 7%) !default;
+
+$btn-inverse-background:            #444 !default;
+$btn-inverse-background-hover:      #222 !default;
+
+
+// Forms
+// -------------------------
+$input-background:                  $white !default;
+$input-border:                      #ccc !default;
+$input-border-radius:               $base-border-radius !default;
+$input-disabled-background:         $gray-lighter !default;
+$form-actions-background:           $table-background-accent !default;
+$input-height:                      $base-line-height + 6px !default; // base line-height + 4px vertical padding + 2px top/bottom border
+
+
+// Dropdowns
+// -------------------------
+$dropdown-background:               $white !default;
+$dropdown-border:                   rgba(black, .2) !default;
+$dropdown-divider-top:              #e5e5e5 !default;
+$dropdown-divider-bottom:           $white !default;
+
+$dropdown-link-color:               $text-color !default;
+$dropdown-link-color-hover:         $dropdown-link-color !default;
+$dropdown-link-color-active:        $dropdown-link-color !default;
+
+$dropdown-link-background-active:   $table-background-hover !default;
+$dropdown-link-background-hover:    $dropdown-link-background-active !default;
+
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+
+// Z-index master list
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+$zindex-dropdown:         1000 !default;
+$zindex-popover:          1010 !default;
+$zindex-tooltip:          1030 !default;
+$zindex-fixed-navbar:     1030 !default;
+$zindex-modal-backdrop:   1040 !default;
+$zindex-modal:            1050 !default;
+
+
+// Input placeholder text color
+// -------------------------
+$placeholder-text:        $gray-light !default;
+
+
+// Hr border color
+// -------------------------
+$hr-border:               $gray-lighter !default;
+
+
+// Horizontal forms & lists
+// -------------------------
+$horizontal-component-offset:       180px !default;
+
+
+// Wells
+// -------------------------
+$well-background:                   $table-background-accent !default;
+
+
+// Navbar
+// -------------------------
+$navbar-collapse-width:             979px !default;
+$navbar-collapse-desktop-width:     $navbar-collapse-width + 1 !default;
+
+$navbar-height:                     $base-line-height * 2 !default;
+$navbar-background-highlight:       #f2f2f2 !default;
+$navbar-background:                 #eaeaea !default;
+$navbar-border:                     $navbar-background !default;
+
+$navbar-text:                       $text-color !default;
+$navbar-link-color:                 #777 !default;
+$navbar-link-color-hover:           $link-color !default;
+$navbar-link-color-active:          white !default;
+$navbar-link-background-hover:      transparent !default;
+$navbar-link-background-active:     $link-color !default;
+
+$navbar-brand-color:                $text-color !default;
+
+// Inverted navbar
+$navbar-inverse-background:                  #222 !default;
+$navbar-inverse-background-highlight:        #333 !default;
+$navbar-inverse-border:                      $navbar-inverse-background !default;
+
+$navbar-inverse-text:                        white !default;
+$navbar-inverse-link-color:                  #bbb !default;
+$navbar-inverse-link-color-hover:            white !default;
+$navbar-inverse-link-color-active:           white !default;
+$navbar-inverse-link-background-hover:       transparent !default;
+$navbar-inverse-link-background-active:      $link-color !default;
+
+$navbar-inverse-search-background:           lighten($navbar-inverse-background, 15%) !default;
+$navbar-inverse-search-background-focus:     white !default;
+$navbar-inverse-search-border:               $navbar-inverse-background-highlight !default;
+$navbar-inverse-search-placeholder-color:    #bbb !default;
+
+$navbar-inverse-brand-color:                 white !default;
+
+
+// Pagination
+// -------------------------
+$pagination-background:             $table-background-accent !default;
+$pagination-active-background:      $link-color !default;
+
+
+// Hero unit
+// -------------------------
+$hero-unit-background:              $table-background-accent !default;
+$hero-unit-heading-color:           inherit !default;
+$hero-unit-lead-color:              inherit !default;
+
+
+// Form states and alerts
+// -------------------------
+$warning-text:               darken($orange, 10%) !default;
+$warning-background:         #fff8c8 !default;
+
+$error-text:                 $red !default;
+$error-background:           #f7c0c0 !default;
+
+$success-text:               $green !default;
+$success-background:         #b8f197 !default;
+
+$info-text:                  darken($btn-info-background, 10%) !default;
+$info-background:            #b1e6f4 !default;
+
+
+// Tooltips and popovers
+// -------------------------
+$tooltip-color:              #fff !default;
+$tooltip-background:         #000 !default;
+$tooltip-arrow-width:        5px !default;
+$tooltip-arrow-color:        $tooltip-background !default;
+
+$popover-background:         #fff !default;
+$popover-arrow-width:        10px !default;
+$popover-arrow-color:        #fff !default;
+$popover-title-background:   darken($popover-background, 3%) !default;
+
+// Special enhancement for popovers
+$popover-arrow-outer-width:  $popover-arrow-width + 1 !default;
+$popover-arrow-outer-color:  rgba(black, .25) !default;
+
+
+
+// GRID
+// --------------------------------------------------
+
+
+// Default 940px grid
+// -------------------------
+$grid-columns:               12 !default;
+$grid-column-width:          60px !default;
+$grid-gutter-width:          20px !default;
+$grid-row-width:             ($grid-columns * $grid-column-width) + ($grid-gutter-width * ($grid-columns - 1)) !default;
+
+// 1200px min
+$grid-column-width-1200:      70px !default;
+$grid-gutter-width-1200:      30px !default;
+$grid-row-width-1200:         ($grid-columns * $grid-column-width-1200) + ($grid-gutter-width-1200 * ($grid-columns - 1)) !default;
+
+// 768px-979px
+$grid-column-width-768:       42px !default;
+$grid-gutter-width-768:       20px !default;
+$grid-row-width-768:          ($grid-columns * $grid-column-width-768) + ($grid-gutter-width-768 * ($grid-columns - 1)) !default;
+
+
+// Fluid grid
+// -------------------------
+$fluid-grid-column-width:    percentage($grid-column-width/$grid-row-width) !default;
+$fluid-grid-gutter-width:    percentage($grid-gutter-width/$grid-row-width) !default;
+
+// 1200px min
+$fluid-grid-column-width-1200:     percentage($grid-column-width-1200/$grid-row-width-1200) !default;
+$fluid-grid-gutter-width-1200:     percentage($grid-gutter-width-1200/$grid-row-width-1200) !default;
+
+// 768px-979px
+$fluid-grid-column-width-768:      percentage($grid-column-width-768/$grid-row-width-768) !default;
+$fluid-grid-gutter-width-768:      percentage($grid-gutter-width-768/$grid-row-width-768) !default;

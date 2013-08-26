@@ -1,0 +1,79 @@
+// Modified from Bootstrap
+
+//
+// Labels and badges
+// --------------------------------------------------
+
+
+// Base classes
+.label,
+.badge {
+  $font-size: $base-font-size - 2;
+  background-color: $gray-light;
+  color: $white;
+  display: inline-block;
+  font-size: $font-size;
+  font-weight: bold;
+  line-height: $font-size;
+  padding: (($base-line-height - $font-size) / 4) 4px;
+  text-shadow: rgba(black, 0.3) 0 1px 0;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+// Set unique padding and border-radii
+.label {
+  @include border-radius(3px);
+}
+.badge {
+  @include border-radius(9px);
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+// Empty labels/badges collapse
+.label,
+.badge {
+  &:empty {
+    display: none;
+  }
+}
+
+// Hover/focus state, but only for links
+a {
+  &.label:hover,
+  &.label:focus,
+  &.badge:hover,
+  &.badge:focus {
+    color: $white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+// Colors
+// Only give background-color difference to links (and to simplify, we don't qualifty with `a` but [href] attribute)
+// Important (red)
+.label-important, .badge-important               { background-color: $red; }
+// Warnings (orange)
+.label-warning, .badge-warning                   { background-color: $orange; }
+// Success (green)
+.label-success, .badge-success                   { background-color: $green; }
+// Info (turquoise)
+.label-info, .badge-info                         { background-color: $btn-info-background; }
+// Inverse (black)
+.label-inverse, .badge-inverse                   { background-color: $gray-dark; }
+
+// Quick fix for labels/badges in buttons
+.btn {
+  .label,
+  .badge {
+    position: relative;
+    top: -1px;
+  }
+}
+.btn-mini {
+  .label,
+  .badge {
+    top: 0;
+  }
+}

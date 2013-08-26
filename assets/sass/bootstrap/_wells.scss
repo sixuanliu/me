@@ -1,0 +1,29 @@
+// Modified from Bootstrap
+
+//
+// Wells
+// --------------------------------------------------
+
+
+// Base class
+.well {
+  @include border-radius($border-radius-large);
+  background-color: $well-background;
+  border: 1px solid darken($well-background, 7%);
+  margin-bottom: $base-line-height;
+  min-height: $base-line-height;
+  padding: ($base-line-height - 1) 19px;
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Sizes
+.well-large {
+  @include border-radius($border-radius-large);
+  padding: ($base-line-height - 1) 24px;
+}
+.well-small {
+  @include border-radius($border-radius-small);
+  padding: ($base-line-height / 2 - 1) 9px;
+}

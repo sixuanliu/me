@@ -1,0 +1,36 @@
+// Modified from Bootstrap
+
+//
+// Accordion
+// --------------------------------------------------
+
+
+// Parent container
+.accordion {
+  margin-bottom: $base-line-height;
+}
+
+// Group == heading + body
+.accordion-group {
+  @include border-radius($base-border-radius);
+  border: 1px solid #e5e5e5;
+  margin-bottom: 2px;
+}
+.accordion-heading {
+  border-bottom: 0;
+}
+.accordion-heading .accordion-toggle {
+  display: block;
+  padding: ($base-line-height / 4 - 1) 15px;
+}
+
+// General toggle styles
+.accordion-toggle {
+  cursor: pointer;
+}
+
+// Inner needs the styles because you can't animate properly with any styles on the element
+.accordion-inner {
+  border-top: 1px solid #e5e5e5;
+  padding: ($base-line-height / 4) 15px ($base-line-height / 4 - 1);
+}

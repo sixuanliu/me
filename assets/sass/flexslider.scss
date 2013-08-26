@@ -1,0 +1,272 @@
+//
+// FlexSlider
+// ==========
+
+
+@import "compass/css3";
+
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+
+// Browser Resets
+// --------------
+
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
+  outline: none
+}
+
+.flexslider .slides,
+.flex-control-nav,
+.flex-direction-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+// FlexSlider Necessary Styles
+// ---------------------------
+
+.flexslider {
+  margin: 0;
+  padding: 0;
+}
+
+.flexslider .slides > li {
+  // Hide the slides before the JS is loaded. Avoids image jumping
+  -webkit-backface-visibility: hidden;
+  display: none;
+}
+
+.flex-pauseplay span {
+  text-transform: capitalize
+}
+
+.flexslider .slides {
+  @include clearfix();
+}
+
+.no-js .flexslider .slides > li:first-child {
+  display: block
+}
+
+
+// Theme
+// -----
+
+.flexslider {
+  margin: 0 0 $base-line-height;
+  position: relative;
+}
+
+.flex-viewport {
+  @include transition(all 1s);
+}
+
+.flexslider.carousel li {
+  margin-right: 5px
+}
+
+.flex-direction-nav > li {
+  *display: inline;
+}
+
+.flex-prev,
+.flex-next {
+  @include border-radius(50%);
+  @include opacity(0.7);
+  @include transition(background .2s, opacity .2s);
+  background: $gray-darker;
+  background: rgba(black, .3);
+  color: transparent;
+  font-size: 0px;
+  height: 36px;
+  line-height: 28px;
+  margin-top: -18px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 36px;
+
+  *color: white;
+  *font-size: 13px;
+  *height: auto;
+  *padding: 0 6px;
+  *width: auto;
+
+  &:hover,
+  &:focus {
+    @include opacity(1);
+    background: rgba(black, .6);
+    color: transparent;
+    text-decoration: none;
+
+    *color: white;
+  }
+  &:before {
+    color: white;
+    font-size: 36px;
+  }
+}
+
+.flex-prev {
+  left: 10px;
+  &:before {
+    content: "‹";
+  }
+}
+
+.flex-next {
+  right: 10px;
+  &:before {
+    content: "›";
+  }
+}
+
+.flex-disabled {
+  &,
+  &:hover,
+  &:focus {
+    @include opacity(0.15);
+    cursor: default;
+  }
+}
+
+.flex-control-nav {
+  bottom: -$base-line-height * 1.25;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  li {
+    display: inline-block;
+    margin: 0 8px;
+
+    @include ie7-inline-block();
+  }
+}
+
+.flex-control-paging li a {
+  @include border-radius(50%);
+  @include transition(background .2s);
+  background: $gray-light + #333;
+  cursor: pointer;
+  display: block;
+  height: $base-line-height / 2;
+  text-indent: -9999px;
+  width: $base-line-height / 2;
+  &:hover,
+  &:focus {
+    background: $gray;
+  }
+  &.flex-active {
+    background: $link-color;
+    cursor: default;
+  }
+}
+
+.flex-control-thumbs {
+  @include clearfix();
+  margin: ($base-line-height / 2) 0 0;
+  position: static;
+  li {
+    float: left;
+    margin: 0;
+    width: 25%;
+
+    *width: 24.9%;
+  }
+  img {
+    @include opacity(.7);
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    &:hover,
+    &:focus {
+      @include opacity(1);
+    }
+  }
+  .flex-active {
+    @include opacity(1);
+    cursor: default;
+  }
+}
+
+.flex-caption {
+  background: $gray-dark;
+  background: rgba(black, .6);
+  bottom: 0;
+  color: $white;
+  left: 0;
+  padding: $base-line-height / 2;
+  position: absolute;
+  right: 0;
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
+  @media (max-width: 639px) {
+    display: none;
+  }
+}
+
+.flex-direction-nav-on-top {
+  .flex-direction-nav {
+    position: absolute;
+    right: 0;
+    top: -$base-line-height * 2;
+    > li {
+      display: inline-block;
+
+      @include ie7-inline-block();
+    }
+  }
+  &:hover,
+  &:focus {
+    .flex-prev,
+    .flex-next,
+    .flex-disabled:hover,
+    .flex-disabled:focus {
+      @include opacity(1);
+    }
+    .flex-disabled:hover,
+    .flex-disabled:focus {
+      *color: $gray-light + #333;
+    }
+  }
+  .flex-prev,
+  .flex-next {
+    @include opacity(1);
+    background: transparent;
+    position: static;
+
+    *color: $gray + #111;
+
+    &:hover,
+    &:focus {
+      color: transparent;
+      text-decoration: none;
+
+      *color: $text-color;
+      &:before {
+        color: $text-color;
+      }
+    }
+    &:before {
+      color: $gray + #111;
+      font-size: 24px;
+      line-height: 1;
+      padding: 0 10px;
+    }
+  }
+  .flex-disabled {
+    *color: $gray-light + #333;
+    &:before,
+    &:hover:before,
+    &:focus:before {
+      color: $gray-light + #333;
+    }
+  }
+}

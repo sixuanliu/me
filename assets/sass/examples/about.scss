@@ -1,0 +1,43 @@
+@import "compass/css3";
+
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+
+body {
+  padding-bottom: $base-line-height * 2;
+}
+
+.team-member {
+  margin-bottom: $base-line-height;
+  .fn {
+    margin-bottom: 0;
+  }
+  .title {
+    @include font-size-small();
+    color: $gray-light;
+    display: block;
+    margin-bottom: $base-line-height / 2;
+  }
+  .social-links {
+    @include clearfix();
+    float: right;
+    list-style: none;
+    margin: -3px 0 0;
+    > li {
+      display: inline;
+      > a {
+        @include transition(color .2s);
+        color: $gray-light;
+        float: left;
+        font-size: 16px;
+        line-height: 30px;
+        padding: 0 2px;
+        text-decoration: none;
+        &:hover {
+          color: $text-color;
+        }
+      }
+    }
+  }
+}

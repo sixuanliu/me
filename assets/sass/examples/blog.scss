@@ -1,0 +1,115 @@
+@import "compass/css3";
+
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+
+%meta {
+  @include font-size-mini();
+  color: $gray-light;
+  list-style: none;
+  margin: 0;
+  > li {
+    display: inline;
+    margin-right: 7px;
+  }
+}
+
+body {
+  padding-bottom: $base-line-height * 2;
+}
+
+.post {
+  margin-bottom: $base-line-height * 2;
+}
+
+.post-meta {
+  @extend %meta;
+  margin-bottom: $base-line-height;
+}
+
+.post-title {
+  border-bottom: 1px solid $hr-border;
+  margin-bottom: ($base-line-height / 2) - 1;
+  > a {
+    color: $headings-color;
+  }
+}
+
+.comments {
+  margin: ($base-line-height * 2) 0;
+  p {
+    margin-bottom: 0;
+    + p {
+      margin-top: $base-line-height / 2;
+    }
+  }
+  .pull-left {
+    @include grid-core-span(1);
+    margin-right: $grid-gutter-width;
+    @media (min-width: 1200px) {
+      @include grid-core-span(1, $grid-column-width-1200, $grid-gutter-width-1200);
+      margin-right: $grid-gutter-width-1200;
+    }
+    @media (max-width: 979px) {
+      @include grid-core-span(1, $grid-column-width-768, $grid-gutter-width-768);
+      margin-right: $grid-gutter-width-768;
+    }
+    @media (max-width: 480px) {
+      width: auto;
+    }
+  }
+}
+
+.comment {
+  border-bottom: 1px solid $hr-border;
+  margin-bottom: $base-line-height;
+  padding-bottom: $base-line-height - 1;
+  .comment {
+    border-bottom: 0;
+    border-top: 1px solid $hr-border;
+    margin: $base-line-height 0 0;
+    padding: ($base-line-height - 1) 0 0;
+  }
+}
+
+.comment-meta {
+  @extend %meta;
+}
+
+.comment-author {
+  @include font-size-large();
+}
+
+.sidebar {
+  @include font-size-small();
+  color: $gray;
+  margin-top: $base-line-height / 2;
+  ul {
+    list-style: none;
+    margin-left: 0;
+    ul {
+      margin-left: 20px;
+    }
+  }
+  section {
+    margin-bottom: $base-line-height * 2;
+  }
+}
+
+.widget-heading {
+  @include font-size-xlarge();
+  margin-bottom: $base-line-height / 2 - 1;
+  border-bottom: 1px solid mix($hr-border, $body-background);
+}
+
+ul.spaced,
+ol.spaced {
+  ul,
+  ol {
+    margin-top: $base-line-height / 2;
+  }
+  li {
+    margin: 0 0 ($base-line-height / 2) 0;
+  }
+}

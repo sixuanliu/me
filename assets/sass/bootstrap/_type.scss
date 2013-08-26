@@ -1,0 +1,245 @@
+// Modified from Bootstrap
+
+//
+// Typography
+// --------------------------------------------------
+
+
+// Body text
+// -------------------------
+
+p {
+  margin: 0 0 ($base-line-height / 2);
+}
+.lead {
+  @include font-size-xlarge();
+}
+
+
+// Emphasis & misc
+// -------------------------
+
+// Ex: 14px base font * 85% = about 12px
+small   { font-size: 85%; }
+
+strong  { font-weight: bold; }
+em      { font-style: italic; }
+cite    { font-style: normal; }
+
+// Utility classes
+.muted               { color: $gray-light; }
+a.muted:hover,
+a.muted:focus        { color: darken($gray-light, 10%); }
+
+.text-warning        { color: $warning-text; }
+a.text-warning:hover,
+a.text-warning:focus { color: darken($warning-text, 10%); }
+
+.text-error          { color: $error-text; }
+a.text-error:hover,
+a.text-error:focus   { color: darken($error-text, 10%); }
+
+.text-info           { color: $info-text; }
+a.text-info:hover,
+a.text-info:focus    { color: darken($info-text, 10%); }
+
+.text-success        { color: $success-text; }
+a.text-success:hover,
+a.text-success:focus { color: darken($success-text, 10%); }
+
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6 {
+  color: $headings-color;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  margin: ($base-line-height / 2) 0;
+  text-rendering: optimizelegibility; // Fix the character spacing for headings
+  small {
+    color: $gray-light;
+    font-weight: normal;
+  }
+}
+
+h1, .h1 { @include font-size-xxxxlarge(); }
+h2, .h2 { @include font-size-xxxlarge(); }
+h3, .h3 { @include font-size-xxlarge(); }
+h4, .h4 { @include font-size-xlarge(); }
+h5, .h5 { @include font-size-large(); }
+h6, .h6 { @include font-size-base(); }
+
+h1, .h1 { small { @include font-size-xlarge(); } }
+h2, .h2 { small { @include font-size-xlarge(); } }
+h3, .h3 { small { @include font-size-base(); } }
+h4, .h4 { small { @include font-size-base(); } }
+
+
+
+// Page header
+// -------------------------
+
+.page-header {
+  margin-bottom: $base-line-height * 2 - 1;
+  border-bottom: 1px solid $hr-border;
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+
+// Lists
+// --------------------------------------------------
+
+// Unordered and Ordered lists
+ul, ol {
+  margin: 0 0 ($base-line-height / 2) 20px;
+  padding: 0;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+li {
+  line-height: $base-line-height;
+}
+
+// Remove default list styles
+ul.unstyled,
+ol.unstyled {
+  list-style: none;
+  margin-left: 0;
+}
+
+// Single-line list items
+ul.inline,
+ol.inline {
+  list-style: none;
+  margin-left: 0;
+  > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    @include ie7-inline-block();
+  }
+}
+
+// Description Lists
+dl {
+  margin-bottom: $base-line-height;
+}
+dt,
+dd {
+  line-height: $base-line-height;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: $base-line-height / 2;
+}
+// Horizontal layout (like forms)
+.dl-horizontal {
+  @include clearfix(); // Ensure dl clears floats if empty dd elements present
+  dt {
+    @include text-overflow();
+    clear: left;
+    float: left;
+    text-align: right;
+    width: $horizontal-component-offset - 20;
+  }
+  dd {
+    margin-left: $horizontal-component-offset;
+  }
+}
+dl.spaced {
+  dd {
+    margin-bottom: $base-line-height / 2;
+  }
+}
+
+// MISC
+// ----
+
+// Horizontal rules
+hr {
+  border: 0;
+  border-top: 1px solid $hr-border;
+  margin: ($base-line-height - 1) 0 $base-line-height;
+}
+
+// Abbreviations and acronyms
+abbr[title],
+// Added data-* attribute to help out our tooltip plugin, per https://github.com/twitter/bootstrap/issues/5257
+abbr[data-original-title] {
+  border-bottom: 1px dotted $gray-light;
+  cursor: help;
+}
+abbr.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+// Blockquotes
+blockquote {
+  border-left: 5px solid $gray-lighter;
+  margin: 0 0 $base-line-height;
+  padding: 0 0 0 15px;
+  p {
+    @include font-size-large();
+    margin-bottom: 0;
+  }
+  small {
+    color: $gray-light;
+    display: block;
+    &:before {
+      content: '\2014 \00A0';
+    }
+  }
+
+  // Float right with text-align: right
+  &.pull-right {
+    border-left: 0;
+    border-right: 5px solid $gray-lighter;
+    float: right;
+    padding-left: 0;
+    padding-right: 15px;
+    p,
+    small {
+      text-align: right;
+    }
+    small {
+      &:before {
+        content: '';
+      }
+      &:after {
+        content: '\00A0 \2014';
+      }
+    }
+  }
+}
+
+// Quotes
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+// Addresses
+address {
+  display: block;
+  font-style: normal;
+  line-height: $base-line-height;
+  margin-bottom: $base-line-height;
+}

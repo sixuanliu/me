@@ -1,0 +1,52 @@
+body {
+  padding-bottom: 48px;
+}
+
+.main-slider {
+  margin-bottom: 48px;
+}
+
+.testimonials blockquote {
+  border: none;
+  padding: 0;
+}
+
+.flickr {
+  *zoom: 1;
+  list-style: none;
+  margin: 0 -10px 24px 0;
+}
+.flickr:before, .flickr:after {
+  content: "";
+  display: table;
+  line-height: 0;
+}
+.flickr:after {
+  clear: both;
+}
+.flickr > li {
+  float: left;
+  margin: 0 10px 12px 0;
+  width: 67px;
+}
+@media (min-width: 1200px) {
+  .flickr > li {
+    width: auto;
+  }
+}
+
+.post-title {
+  font-size: 20px;
+  line-height: 36px;
+  margin: 0;
+}
+.post-title > a {
+  color: inherit;
+}
+
+.post-meta {
+  font-size: 12px;
+  line-height: 24px;
+  color: #999999;
+  margin: 0;
+}

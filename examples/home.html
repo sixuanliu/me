@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Silverwhite</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- http://www.456bereastreet.com/archive/201209/tell_css_that_javascript_is_available_asap/ -->
+  <script>
+    document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');
+  </script>
+
+  <!-- Exclude IE7 becuase it may renders web fonts blurry -->
+  <!--[if !(IE 7)]><!-->
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700'>
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="../assets/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap-responsive.css">
+  <link rel="stylesheet" href="../assets/css/switcher.css">
+  <!--[if IE 7]>
+    <link rel="stylesheet" href="../assets/css/font-awesome-ie7.min.css">
+  <![endif]-->
+
+  <link rel="stylesheet" href="../assets/css/flexslider.css">
+  <link rel="stylesheet" href="../assets/css/examples/home.css">
+
+  <!--[if lt IE 9]>
+    <script src="../assets/js/html5shiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <h1><a class="brand" href="../index.html">Silverwhite</a></h1>
+        <p class="pull-left navbar-text"><span class="muted">1.3</span></p>
+        <div id="switcher"></div>
+        <div class="nav-collapse collapse">
+          <ul class="nav pull-right">
+            <li><a href="../getting-started.html">Get started</a></li>
+            <li><a href="../scaffolding.html">Scaffolding</a></li>
+            <li><a href="../base-css.html">Base CSS</a></li>
+            <li><a href="../components.html">Components</a></li>
+            <li><a href="../javascript.html">JavaScript</a></li>
+            <li class="active dropdown dropdown-hover">
+              <a class="dropdown-toggle" href="#" data-toggle="dropdown">Examples <span class="caret"></span></a>
+              <div class="dropdown-menu span4">
+                <div class="row">
+                  <div class="span2">
+                    <ul class="mega-menu-links">
+                      <li><a href="../examples/hero.html" target="_blank">Basic marketing site</a></li>
+                      <li><a href="../examples/fluid.html" target="_blank">Fluid layout</a></li>
+                      <li><a href="../examples/marketing-narrow.html" target="_blank">Narrow marketing</a></li>
+                      <li><a href="../examples/justified-nav.html" target="_blank">Justified nav</a></li>
+                      <li><a href="../examples/signin.html" target="_blank">Sign in</a></li>
+                    </ul>
+                  </div>
+                  <div class="span2">
+                    <ul class="mega-menu-links">
+                      <li><a href="../examples/home.html">Home</a></li>
+                      <li><a href="../examples/about.html">About</a></li>
+                      <li><a href="../examples/portfolio.html">Portfolio</a></li>
+                      <li><a href="../examples/project.html">Project</a></li>
+                      <li><a href="../examples/blog.html">Blog</a></li>
+                      <li><a href="../examples/blog-single.html">Blog single</a></li>
+                      <li><a href="../examples/contact.html">Contact</a></li>
+                      <li><a href="../examples/flexslider.html">FlexSlider</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div><!-- .nav-collapse -->
+      </div>
+    </div>
+  </div><!-- .navbar -->
+
+  <div class="container">
+    <div class="main-slider flexslider">
+      <ul class="slides">
+        <li><img src="../assets/img/placeholders/1170x468.gif" alt="" /></li>
+        <li>
+          <a href="#"><img src="../assets/img/placeholders/1170x468.gif" alt="" /></a>
+          <div class="flex-caption">
+            <h2 class="h4">Caption</h2>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+          </div>
+        </li>
+      </ul>
+    </div><!-- .main-slider -->
+
+    <div class="row">
+
+      <div class="span4">
+        <h2 class="h3">Hello</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+      </div>
+
+      <div class="span4">
+        <h2 class="h3">Testimonials</h2>
+        <div class="testimonials flexslider flex-direction-nav-on-top">
+          <ul class="slides">
+            <li>
+              <blockquote>
+                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.”</p>
+                <small>John Doe</small>
+              </blockquote>
+            </li>
+            <li>
+              <blockquote>
+                <p>“Duis id tempor nisi. Curabitur egestas gravida lobortis. Praesent at leo faucibus nisl dictum feugiat sit amet ut est. Fusce nec ante ac arcu pulvinar consectetur. Praesent commodo ultrices ipsum, convallis laoreet ante fermentum sit amet.”</p>
+                <small>John Doe</small>
+              </blockquote>
+            </li>
+            <li>
+              <blockquote>
+                <p>“Praesent vel magna eget sem commodo sagittis. Donec lacinia metus at nulla venenatis vitae luctus ligula suscipit. Nunc pretium convallis pretium. Vivamus dictum,”</p>
+                <small>John Doe</small>
+              </blockquote>
+            </li>
+          </ul>
+        </div><!-- .testimonials -->
+      </div><!-- .span4 -->
+
+      <div class="span4">
+        <h2 class="h3">Flickr</h2>
+        <ul class="flickr"></ul>
+      </div>
+
+    </div><!-- .row -->
+
+    <h2 class="h3">Recent Posts</h2>
+
+    <div class="row">
+      <div class="recent-posts flexslider flex-direction-nav-on-top">
+        <ul class="slides">
+          <li>
+            <div class="span4">
+              <h3 class="post-title"><a href="blog-single.html">Sed Varius Augue Id Bibendum</a></h3>
+              <p class="post-meta">April 1, 2013</p>
+              <p>Sed varius, augue id bibendum auctor, magna leo tempor nunc, ut luctus lorem nulla in massa. Nunc porttitor nisl in nibh auctor lobortis. S...</p>
+            </div>
+            <div class="span4">
+              <h3 class="post-title"><a href="blog-single.html">Magna Leo Tempor Nunc</a></h3>
+              <p class="post-meta">May 1, 2013</p>
+              <p>Integer nibh nisl, ornare a rutrum et, consequat quis arcu. Curabitur enim turpis, condimentum ut imperdiet sed, lobortis nec massa. Curabi...</p>
+            </div>
+            <div class="span4">
+              <h3 class="post-title"><a href="blog-single.html">Ut Luctus Lorem Nulla</a></h3>
+              <p class="post-meta">June 1, 2013</p>
+              <p>Nam vel ipsum a felis vulputate interdum. Aliquam ligula sem, hendrerit nec dictum quis, vestibulum sit amet nibh. Sed blandit, erat in lao...</p>
+            </div>
+          </li>
+          <li>
+            <div class="span4">
+              <h3 class="post-title"><a href="blog-single.html">Vivamus Vitae Augue</a></h3>
+              <p class="post-meta">July 1, 2013</p>
+              <p>Sed varius, augue id bibendum auctor, magna leo tempor nunc, ut luctus lorem nulla in massa. Nunc porttitor nisl in nibh auctor lobortis. S...</p>
+            </div>
+            <div class="span4">
+              <h3 class="post-title"><a href="blog-single.html">Suspendisse Potenti Donec</a></h3>
+              <p class="post-meta">August 1, 2013</p>
+              <p>Integer nibh nisl, ornare a rutrum et, consequat quis arcu. Curabitur enim turpis, condimentum ut imperdiet sed, lobortis nec massa. Curabi...</p>
+            </div>
+            <div class="span4">
+              <h3 class="post-title"><a href="blog-single.html">Vestibulum Purus Gravida</a></h3>
+              <p class="post-meta">September 1, 2013</p>
+              <p>Nam vel ipsum a felis vulputate interdum. Aliquam ligula sem, hendrerit nec dictum quis, vestibulum sit amet nibh. Sed blandit, erat in lao...</p>
+            </div>
+          </li>
+        </ul>
+      </div><!-- .recent-posts -->
+    </div><!-- .row -->
+
+  </div><!-- .container -->
+
+
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+
+  <script src="../assets/js/cookies.min.js"></script><!-- For style switcher -->
+  <script src="../assets/js/switcher.js"></script>
+
+  <script src="../assets/js/jquery.flexslider.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.main-slider').flexslider({
+        slideshow: false
+      });
+      $('.testimonials, .recent-posts').flexslider({
+        animation: 'slide',
+        slideshow: false,
+        animationLoop: false,
+        controlNav: false
+      });
+    });
+  </script>
+
+  <script src="../assets/js/jflickrfeed.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.flickr').jflickrfeed({
+        limit: 8,
+        qstrings: {id: '52617155@N08'},
+        itemTemplate: '<li><a href="{{link}}"><img src="{{image_s}}" alt="{{title}}" /></a></li>'
+      });
+    });
+  </script>
+
+</body>
+</html>

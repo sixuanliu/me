@@ -1,0 +1,154 @@
+// Modified from Bootstrap
+
+//
+// Carousel
+// --------------------------------------------------
+
+
+.carousel {
+  margin-bottom: $base-line-height;
+  position: relative;
+}
+
+.carousel-inner {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.carousel-inner {
+
+  > .item {
+    @include transition(.6s ease-in-out left);
+    display: none;
+    position: relative;
+    // Account for jankitude on images
+    > img,
+    > a > img {
+      display: block;
+      line-height: 1;
+    }
+  }
+
+  > .active,
+  > .next,
+  > .prev { display: block; }
+
+  > .active {
+    left: 0;
+  }
+
+  > .next,
+  > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  > .next {
+    left: 100%;
+  }
+  > .prev {
+    left: -100%;
+  }
+  > .next.left,
+  > .prev.right {
+    left: 0;
+  }
+
+  > .active.left {
+    left: -100%;
+  }
+  > .active.right {
+    left: 100%;
+  }
+
+}
+
+// Left/right controls for nav
+// ---------------------------
+
+.carousel-control {
+  @include border-radius(50%);
+  @include opacity(.7);
+  background: $gray-darker;
+  background: rgba(black, .3);
+  color: $white;
+  font-size: 36px;
+  height: 36px;
+  left: 10px;
+  line-height: 28px;
+  margin-top: -18px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 36px;
+
+  // we can't have this transition here
+  // because webkit cancels the carousel
+  // animation if you trip this while
+  // in the middle of another animation
+  // ;_;
+  // @include transition(opacity .2s linear);
+
+  // Reposition the right one
+  &.right {
+    left: auto;
+    right: 10px;
+  }
+
+  // Hover/focus state
+  &:hover,
+  &:focus {
+    @include opacity(1);
+    background: rgba(black, .6);
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+// Carousel indicator pips
+// -----------------------------
+.carousel-indicators {
+  list-style: none;
+  margin: 0;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 5;
+
+  li {
+    background-color: #ccc;
+    background-color: rgba(white, .25);
+    border-radius: 5px;
+    display: block;
+    float: left;
+    height: 10px;
+    margin-left: 5px;
+    text-indent: -999px;
+    width: 10px;
+  }
+  .active {
+    background-color: #fff;
+  }
+}
+
+// Caption for text below images
+// -----------------------------
+
+.carousel-caption {
+  background: $gray-dark;
+  background: rgba(black, .6);
+  bottom: 0;
+  color: $white;
+  left: 0;
+  padding: $base-line-height / 2;
+  position: absolute;
+  right: 0;
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
+  @media (max-width: 639px) {
+    display: none;
+  }
+}

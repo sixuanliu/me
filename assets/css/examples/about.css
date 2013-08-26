@@ -1,0 +1,49 @@
+body {
+  padding-bottom: 48px;
+}
+
+.team-member {
+  margin-bottom: 24px;
+}
+.team-member .fn {
+  margin-bottom: 0;
+}
+.team-member .title {
+  font-size: 13px;
+  line-height: 24px;
+  color: #999999;
+  display: block;
+  margin-bottom: 12px;
+}
+.team-member .social-links {
+  *zoom: 1;
+  float: right;
+  list-style: none;
+  margin: -3px 0 0;
+}
+.team-member .social-links:before, .team-member .social-links:after {
+  content: "";
+  display: table;
+  line-height: 0;
+}
+.team-member .social-links:after {
+  clear: both;
+}
+.team-member .social-links > li {
+  display: inline;
+}
+.team-member .social-links > li > a {
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
+  color: #999999;
+  float: left;
+  font-size: 16px;
+  line-height: 30px;
+  padding: 0 2px;
+  text-decoration: none;
+}
+.team-member .social-links > li > a:hover {
+  color: #333333;
+}

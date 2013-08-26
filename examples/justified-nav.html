@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Justified nav | Silverwhite</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- http://www.456bereastreet.com/archive/201209/tell_css_that_javascript_is_available_asap/ -->
+  <script>
+    document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');
+  </script>
+
+  <!-- Exclude IE7 becuase it may renders web fonts blurry -->
+  <!--[if !(IE 7)]><!-->
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700'>
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="../assets/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap-responsive.css">
+  <link rel="stylesheet" href="../assets/css/switcher.css">
+  <!--[if IE 7]>
+    <link rel="stylesheet" href="../assets/css/font-awesome-ie7.min.css">
+  <![endif]-->
+
+  <style>
+    body {
+      padding-bottom: 48px;
+      padding-top: 24px;
+    }
+
+    /* Custom container */
+    .container {
+      margin: 0 auto;
+      max-width: 1000px;
+    }
+    .container > hr {
+      margin: 60px 0;
+    }
+
+    /* Main marketing message and sign up button */
+    .jumbotron {
+      margin: 72px 0;
+      text-align: center;
+    }
+    .jumbotron-heading {
+      font-size: 96px;
+      line-height: 1;
+    }
+    .jumbotron .lead {
+      font-size: 26px
+      line-height: 36px;
+    }
+    .jumbotron .btn {
+      font-size: 24px;
+      line-height: 1;
+      margin-top: 48px;
+      padding: 14px 24px;
+    }
+
+
+    /* Customize the navbar links to be fill the entire space of the .navbar */
+    .navbar .navbar-inner {
+      padding: 0;
+    }
+    .navbar .nav {
+      display: table;
+      margin: 0;
+      width: 100%;
+    }
+    .navbar .nav li {
+      display: table-cell;
+      float: none;
+      width: 1%;
+    }
+    .navbar .nav li a {
+      border-right: 1px solid rgba(0, 0, 0, .07);
+      font-weight: bold;
+      padding-bottom: 12px;
+      text-align: center;
+    }
+    .navbar .nav li:first-child a {
+      border-radius: 3px 0 0 3px;
+    }
+    .navbar .nav li:last-child a {
+      border-right: 0;
+      border-radius: 0 3px 3px 0;
+    }
+  </style>
+
+  <!--[if lt IE 9]>
+    <script src="../assets/js/html5shiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+
+    <div class="masthead">
+      <h1 class="muted">Project name</h1>
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Downloads</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div><!-- /.navbar -->
+    </div>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+      <h2 class="jumbotron-heading">Marketing stuff!</h2>
+      <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <a class="btn btn-large btn-success" href="#">Get started today</a>
+    </div>
+
+    <hr>
+
+    <!-- Example row of columns -->
+    <div class="row-fluid">
+      <div class="span4">
+        <h2>Heading</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn" href="#">View details &raquo;</a></p>
+      </div>
+      <div class="span4">
+        <h2>Heading</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn" href="#">View details &raquo;</a></p>
+      </div>
+      <div class="span4">
+        <h2>Heading</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+        <p><a class="btn" href="#">View details &raquo;</a></p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="footer">
+      <p>&copy; Company 2013</p>
+    </div>
+
+  </div> <!-- /container -->
+
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+
+  <script src="../assets/js/cookies.min.js"></script><!-- For style switcher -->
+  <script src="../assets/js/switcher.js"></script>
+
+</body>
+</html>

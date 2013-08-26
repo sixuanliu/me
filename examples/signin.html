@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Sign in | Silverwhite</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- http://www.456bereastreet.com/archive/201209/tell_css_that_javascript_is_available_asap/ -->
+  <script>
+    document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');
+  </script>
+
+  <!-- Exclude IE7 becuase it may renders web fonts blurry -->
+  <!--[if !(IE 7)]><!-->
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700'>
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="../assets/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap-responsive.css">
+  <link rel="stylesheet" href="../assets/css/switcher.css">
+  <!--[if IE 7]>
+    <link rel="stylesheet" href="../assets/css/font-awesome-ie7.min.css">
+  <![endif]-->
+
+  <style>
+    .brand-alt {
+      color: #333;
+      display: block;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1;
+      text-align: center;
+      text-decoration: none;
+    }
+    .brand-alt:hover {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .signin {
+      background-color: #fff;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 3px 15px rgba(0, 0, 0, 0.1);
+      margin: -60px auto 0;
+      max-width: 240px;
+      padding: 12px 30px;
+      position: relative;
+    }
+    .signin-heading {
+      margin: 0 -30px 24px;
+      text-align: center;
+    }
+    .signin-form input[type="text"],
+    .signin-form input[type="password"] {
+      font-size: 16px;
+      height: auto;
+      margin-bottom: 12px;
+    }
+    .signin-form .checkbox {
+      margin-bottom: 12px;
+    }
+    /* The "Forgot?" link */
+    .signin-form label > a {
+      float: right;
+      font-size: 12px;
+    }
+  </style>
+
+  <!--[if lt IE 9]>
+    <script src="../assets/js/html5shiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <h1><a class="brand-alt" href="#">Silverwhite</a></h1>
+    </div>
+  </div>
+
+  <div class="signin">
+    <h2 class="signin-heading">Sign in</h2>
+    <form class="signin-form">
+      <label for="inputEmail">Email</label>
+      <input class="input-block-level" type="text" id="inputEmail" />
+      <label for="inputPassword">
+        Password
+        <a href="#">Forgot?</a>
+      </label>
+      <input class="input-block-level" type="password" id="inputPassword" />
+      <label class="checkbox"><input type="checkbox" /> Remember me</label>
+      <button class="btn btn-large btn-primary input-block-level" type="submit">Sign in</button>
+    </form>
+  </div>
+
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+
+  <script src="../assets/js/cookies.min.js"></script><!-- For style switcher -->
+  <script src="../assets/js/switcher.js"></script>
+
+</body>
+</html>

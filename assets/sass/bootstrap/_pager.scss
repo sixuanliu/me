@@ -1,0 +1,46 @@
+// Modified from Bootstrap
+
+//
+// Pager pagination
+// --------------------------------------------------
+
+
+.pager {
+  @include clearfix();
+  @include font-size-small();
+  list-style: none;
+  margin: $base-line-height 0;
+  text-align: center;
+}
+.pager li {
+  display: inline;
+}
+.pager li > a,
+.pager li > span {
+  @include border-radius($base-border-radius);
+  background-color: $table-background-accent;
+  color: $gray;
+  display: inline-block;
+  padding: ($base-line-height / 8) 15px;
+}
+.pager li > a:hover,
+.pager li > a:focus {
+  background-color: $table-background-hover;
+  text-decoration: none;
+}
+.pager .next > a,
+.pager .next > span {
+  float: right;
+}
+.pager .previous > a,
+.pager .previous > span {
+  float: left;
+}
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span {
+  background-color: $pagination-background;
+  color: $gray-light;
+  cursor: default;
+}

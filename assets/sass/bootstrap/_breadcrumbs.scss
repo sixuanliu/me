@@ -1,0 +1,31 @@
+// Modified from Bootstrap
+
+//
+// Breadcrumbs
+// --------------------------------------------------
+
+
+.breadcrumb {
+  @include border-radius($base-border-radius);
+  @include font-size-small();
+  background-color: $table-background-accent;
+  list-style: none;
+  margin: 0 0 $base-line-height;
+  padding: ($base-line-height / 4) 15px;
+  > li {
+    display: inline-block;
+
+    @include ie7-inline-block();
+
+    > a {
+      color: #777;
+    }
+    > .divider {
+      color: $gray-light;
+      padding: 0 5px;
+    }
+  }
+  > .active {
+    color: $gray-dark;
+  }
+}

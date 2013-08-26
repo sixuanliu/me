@@ -1,0 +1,25 @@
+// Modified from Bootstrap
+
+//
+// Hero unit
+// --------------------------------------------------
+
+
+.hero-unit {
+  @include border-radius($border-radius-large);
+  @include font-size-xlarge();
+  background-color: $hero-unit-background;
+  color: $hero-unit-lead-color;
+  margin-bottom: $base-line-height;
+  padding: $base-line-height * 2;
+  h1,
+  .hero-unit-heading {
+    color: $hero-unit-heading-color;
+    font-size: 48px;
+    line-height: $base-line-height * 3;
+    margin: 0;
+  }
+  li {
+    line-height: $base-line-height * 1.5; // Reset since we specify in _type.scss
+  }
+}

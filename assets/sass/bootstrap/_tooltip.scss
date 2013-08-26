@@ -1,0 +1,72 @@
+// Modified from Bootstrap
+
+//
+// Tooltips
+// --------------------------------------------------
+
+
+// Base class
+.tooltip {
+  @include font-size-small();
+  @include opacity(0);
+  display: block;
+  line-height: 1.4;
+  position: absolute;
+  visibility: visible;
+  z-index: $zindex-tooltip;
+  &.in     { @include opacity(.8); }
+  &.top    { margin-top:  -3px; padding: 5px 0; }
+  &.right  { margin-left:  3px; padding: 0 5px; }
+  &.bottom { margin-top:   3px; padding: 5px 0; }
+  &.left   { margin-left: -3px; padding: 0 5px; }
+}
+
+// Wrapper for the tooltip content
+.tooltip-inner {
+  @include border-radius($border-radius-large);
+  background-color: $tooltip-background;
+  color: $tooltip-color;
+  max-width: 200px;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+}
+
+// Arrows
+.tooltip-arrow {
+  border-color: transparent;
+  border-style: solid;
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+.tooltip {
+  &.top .tooltip-arrow {
+    border-top-color: $tooltip-arrow-color;
+    border-width: $tooltip-arrow-width $tooltip-arrow-width 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -$tooltip-arrow-width;
+  }
+  &.right .tooltip-arrow {
+    border-right-color: $tooltip-arrow-color;
+    border-width: $tooltip-arrow-width $tooltip-arrow-width $tooltip-arrow-width 0;
+    left: 0;
+    margin-top: -$tooltip-arrow-width;
+    top: 50%;
+  }
+  &.left .tooltip-arrow {
+    border-left-color: $tooltip-arrow-color;
+    border-width: $tooltip-arrow-width 0 $tooltip-arrow-width $tooltip-arrow-width;
+    margin-top: -$tooltip-arrow-width;
+    right: 0;
+    top: 50%;
+  }
+  &.bottom .tooltip-arrow {
+    border-bottom-color: $tooltip-arrow-color;
+    border-width: 0 $tooltip-arrow-width $tooltip-arrow-width;
+    left: 50%;
+    margin-left: -$tooltip-arrow-width;
+    top: 0;
+  }
+}

@@ -1,0 +1,5 @@
+gMap is licensed under Creative Commons BY-SA 3.0 license
+<http://creativecommons.org/licenses/by-sa/3.0/>. In short: You're allowed to
+use, copy, distribute, transmit and to adapt - as long as you attribute the
+work. If you alter, modify or build upon this sourcecode, you may distribute
+the resulting work only under the same, similar or compatible license. 

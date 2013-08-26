@@ -1,0 +1,217 @@
+// Modified from Bootstrap
+
+//
+// Responsive: Navbar
+// --------------------------------------------------
+
+
+// TABLETS AND BELOW
+// -----------------
+@media (max-width: $navbar-collapse-width) {
+
+  // UNFIX THE TOPBAR
+  // ----------------
+  // Remove any padding from the body
+  body {
+    padding-top: 0;
+  }
+  // Unfix the navbars
+  .navbar-fixed-top,
+  .navbar-fixed-bottom {
+    position: static;
+  }
+  .navbar-fixed-top {
+    margin-bottom: $base-line-height - 1;
+  }
+  .navbar-fixed-bottom {
+    margin-top: $base-line-height - 1;
+  }
+  .navbar .container {
+    padding: 0;
+    width: auto;
+  }
+  // Account for brand name
+  .navbar .brand {
+    margin: 0 0 0 -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  // COLLAPSIBLE NAVBAR
+  // ------------------
+  // Nav collapse clears brand
+  .nav-collapse {
+    clear: both;
+  }
+  // Block-level the nav
+  .nav-collapse .nav {
+    float: none;
+    margin: 0 0 ($base-line-height / 2);
+  }
+  .nav-collapse .nav > li {
+    float: none;
+  }
+  .nav-collapse .nav > li > a {
+    margin-bottom: 2px;
+    border: none;
+  }
+  .nav-collapse .nav > li > a:focus,
+  .nav-collapse .nav > li > a:hover,
+  .nav-collapse .nav > .active > a,
+  .nav-collapse .nav > .active > a:hover,
+  .nav-collapse .nav > .active > a:focus {
+    @include box-shadow(none);
+  }
+  .nav-collapse .nav > .divider-vertical {
+    display: none;
+  }
+  // Nav and dropdown links in navbar
+  .nav-collapse .nav > li > a,
+  .nav-collapse ul.dropdown-menu a,
+  .nav-collapse .mega-menu-links a {
+    @include border-radius(3px);
+    color: $navbar-link-color;
+    font-weight: bold;
+    margin-top: 0;
+    padding: 9px 15px;
+  }
+  .nav-collapse ul.dropdown-menu li + li a {
+    margin-bottom: 2px;
+  }
+  .nav-collapse .nav li.dropdown.dropdown-hover:hover > .dropdown-toggle,
+  .nav-collapse .nav li.dropdown.open > .dropdown-toggle {
+    @include box-shadow(none);
+  }
+  .nav-collapse .nav li.dropdown.dropdown-hover:hover > .dropdown-toggle,
+  .nav-collapse .nav li.dropdown.open > .dropdown-toggle,
+  .nav-collapse .dropdown-submenu:hover > a,
+  .nav-collapse .dropdown-submenu:focus > a,
+  .nav-collapse .nav > li > a:hover,
+  .nav-collapse .nav > li > a:focus {
+    background-color: transparent;
+    color: $navbar-link-color-hover;
+    .navbar-inverse & {
+      color: $navbar-inverse-link-color-hover;
+    }
+  }
+  .navbar-inverse .nav-collapse .nav > li > a,
+  .navbar-inverse .nav-collapse ul.dropdown-menu a {
+    color: $navbar-inverse-link-color;
+  }
+  .navbar-inverse .nav-collapse .nav > .active > a,
+  .navbar-inverse .nav-collapse .nav > .active > a:hover,
+  .navbar-inverse .nav-collapse .nav > .active > a:focus {
+    background-color: $navbar-inverse-link-background-active;
+    color: $navbar-inverse-link-color-active;
+  }
+  .navbar-inverse .nav-collapse .nav li.dropdown-hover:hover > .dropdown-toggle .caret,
+  .navbar-inverse .nav-collapse .nav li.dropdown.open > .dropdown-toggle .caret {
+    border-bottom-color: $navbar-inverse-link-color-hover;
+    border-top-color: $navbar-inverse-link-color-hover;
+  }
+  // Hide carets of always expanded dropdown menus
+  .nav-collapse .dropdown-submenu > a:after {
+    display: none;
+  }
+  // Buttons in the navbar
+  .nav-collapse.in .btn-group {
+    margin-top: 5px;
+    padding: 0;
+  }
+  // Dropdowns in the navbar
+  .nav-collapse .dropdown-menu {
+    @include border-radius(3px);
+    @include box-shadow(none);
+    background-color: transparent;
+    border: none;
+    display: none;
+    float: none;
+    left: auto;
+    max-width: none;
+    padding: 0;
+    position: static;
+    top: auto;
+  }
+  .nav-collapse .dropdown-hover .dropdown-submenu > .dropdown-menu,
+  .nav-collapse .open .dropdown-menu {
+    display: block;
+  }
+
+  .nav-collapse ul.dropdown-menu .divider {
+    display: none;
+  }
+  .nav-collapse ul.dropdown-menu,
+  .nav-collapse .nav > li > ul.dropdown-menu,
+  .nav-collapse .pull-right > li > .dropdown-menu ul.dropdown-menu,
+  .nav-collapse .nav > li > ul.dropdown-menu.pull-right .dropdown-menu {
+    margin: 0 15px;
+  }
+  // Forms in navbar
+  .nav-collapse .navbar-form,
+  .nav-collapse .navbar-search {
+    border-color: rgba(black, .03);
+    border-style: solid;
+    border-width: 1px 0;
+    float: none;
+    margin: ($base-line-height / 2) 0;
+    padding: ($base-line-height / 2 - 1) 15px;
+  }
+  .navbar-inverse .nav-collapse .navbar-form,
+  .navbar-inverse .nav-collapse .navbar-search {
+    border-color: rgba(white, .03);
+  }
+  // Pull right (secondary) nav content
+  .navbar .nav-collapse .nav.pull-right {
+    float: none;
+    margin-left: 0;
+  }
+  // Hide everything in the navbar save .brand and toggle button */
+  .nav-collapse,
+  .nav-collapse.collapse {
+    height: 0;
+    overflow: hidden;
+  }
+  // Navbar button
+  .navbar .btn-navbar {
+    @include box-shadow(none);
+    background: transparent;
+    border-color: transparent;
+    display: block;
+  }
+
+  // STATIC NAVBAR
+  // -------------
+  .navbar-static .navbar-inner {
+    padding-left:  10px;
+    padding-right: 10px;
+  }
+
+  // Mega menu
+  // ---------
+  .nav-collapse {
+    .dropdown-menu[class*="span"] {
+      background-color: white;
+      margin: 0 0 2px;
+      padding: $base-line-height 15px;
+    }
+    .thumbnails > li,
+    [class*="span"] {
+      float: none;
+      width: auto;
+    }
+  }
+}
+
+
+// DEFAULT DESKTOP
+// ---------------
+
+@media (min-width: $navbar-collapse-desktop-width) {
+
+  // Required to make the collapsing navbar work on regular desktops
+  .nav-collapse.collapse {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+}

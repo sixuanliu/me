@@ -1,0 +1,130 @@
+// Style Switcher http://sam.zoy.org/wtfpl/
+
+
+@import "compass/css3";
+
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+
+$breakpoint: 'max-width: 430px';
+$icon-button-height: 36px;
+$color-button-width: 27px;
+
+
+%icon-button {
+  font-size: 19px;
+  height: $icon-button-height;
+  text-align: center;
+  text-decoration: none;
+  width: $icon-button-height - 2;
+  > i {
+    display: inline-block;
+    line-height: 1;
+    padding-top: 9px;
+    &::before {
+      display: block;
+    }
+  }
+  @media ($breakpoint) {
+    width: $icon-button-height - 4;
+  }
+}
+
+
+#switcher {
+  @include border-radius(5px);
+  @include navbar-vertical-align($icon-button-height);
+  float: right;
+  &.active {
+    @include box-shadow(0 1px 3px rgba(0, 0, 0, .1));
+    background-color: white;
+    margin-left: 10px;
+    @media ($breakpoint) {
+      position: absolute;
+      right: 20px;
+    }
+  }
+}
+
+#switcher-switcher {
+  @extend %icon-button;
+  color: $navbar-link-color;
+  float: right;
+  &:hover {
+    color: #333;
+  }
+  .navbar-inverse & {
+    color: $navbar-inverse-link-color;
+    &:hover {
+      color: white;
+    }
+  }
+  #switcher.active & {
+    border-left: 1px solid #eee;
+    color: #444;
+  }
+}
+
+#switcher-settings {
+  display: none;
+  float: left;
+  #switcher.active & {
+    display: block;
+  }
+  > a {
+    @extend %icon-button;
+    border-right: 1px solid #eee;
+    color: #aaa;
+    float: left;
+    &.active {
+      color: #444;
+    }
+  }
+}
+
+#switcher-colors {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0 4px;
+  > li {
+    float: left;
+  }
+  > .active a {
+    cursor: default;
+  }
+  > li > a {
+    @extend %icon-button;
+    display: block;
+    width: $color-button-width;
+    @media ($breakpoint) {
+      width: $color-button-width - 2;
+    }
+  }
+}
+#switcher-colors-default > a {
+  color: $blue;
+}
+#switcher-colors-red > a {
+  color: $red;
+}
+#switcher-colors-green > a {
+  color: $green;
+}
+
+.has-navbar-fixed-top {
+  margin-top: $base-line-height * 4;
+  .jumbotron {
+    margin-top: -$base-line-height * 2;
+  }
+}
+
+@media (max-width: 979px) {
+  .has-navbar-fixed-top {
+    margin-top: 0;
+    .jumbotron {
+      margin-top: -($base-line-height - 1);
+    }
+  }
+}

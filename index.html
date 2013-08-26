@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Just Site It</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- http://www.456bereastreet.com/archive/201209/tell_css_that_javascript_is_available_asap/ -->
+    <script>
+    document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');
+    </script>
+    <link rel="shortcut icon" href="assets/img/embed.png">
+
+  <!-- Exclude IE7 becuase it may renders web fonts blurry -->
+  <!--[if !(IE 7)]><!-->
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700'>
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-responsive.css">
+  <link rel="stylesheet" href="assets/css/switcher.css">
+  <!--[if IE 7]>
+    <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
+  <![endif]-->
+
+  <link rel="stylesheet" href="assets/google-code-prettify/prettify.css">
+  <link rel="stylesheet" href="assets/css/docs.css">
+
+  <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.min.js"></script>
+  <![endif]-->
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <h1><a class="brand" href="index.html">Just Site It</a></h1>
+        <p class="pull-left navbar-text"><span class="muted">1.3</span></p>
+        <div id="switcher"></div>
+        <div class="nav-collapse collapse">
+          <ul class="nav pull-right">
+            <li><a href="getting-started.html">Get started</a></li>
+            <li><a href="scaffolding.html">Scaffolding</a></li>
+            <li><a href="base-css.html">Base CSS</a></li>
+            <li><a href="components.html">Components</a></li>
+            <li><a href="javascript.html">JavaScript</a></li>
+            <li class="dropdown dropdown-hover">
+              <a class="dropdown-toggle" href="#" data-toggle="dropdown">Examples <span class="caret"></span></a>
+              <div class="dropdown-menu span4">
+                <div class="row">
+                  <div class="span2">
+                    <ul class="mega-menu-links">
+                      <li><a href="examples/hero.html" target="_blank">Basic marketing site</a></li>
+                      <li><a href="examples/fluid.html" target="_blank">Fluid layout</a></li>
+                      <li><a href="examples/marketing-narrow.html" target="_blank">Narrow marketing</a></li>
+                      <li><a href="examples/justified-nav.html" target="_blank">Justified nav</a></li>
+                      <li><a href="examples/signin.html" target="_blank">Sign in</a></li>
+                    </ul>
+                  </div>
+                  <div class="span2">
+                    <ul class="mega-menu-links">
+                      <li><a href="examples/home.html">Home</a></li>
+                      <li><a href="examples/about.html">About</a></li>
+                      <li><a href="examples/portfolio.html">Portfolio</a></li>
+                      <li><a href="examples/project.html">Project</a></li>
+                      <li><a href="examples/blog.html">Blog</a></li>
+                      <li><a href="examples/blog-single.html">Blog single</a></li>
+                      <li><a href="examples/contact.html">Contact</a></li>
+                      <li><a href="examples/flexslider.html">FlexSlider</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div><!-- .nav-collapse -->
+      </div>
+    </div>
+  </div><!-- .navbar -->
+
+  <header class="jumbotron masthead">
+    <div class="container">
+      <h2 class="masthead-heading">Silverwhite</h2>
+      <p>Bootstrap skin</p>
+      <p><a class="masthead-btn btn btn-primary" href="getting-started.html"><i class="icon-chevron-right"></i> Get started</a></p>
+      <ul class="masthead-features inline">
+        <li>★ Responsive Web Design</li>
+        <li>★ Web Development</li>
+        <li>★ Search Engine Optimization</li>
+      </ul>
+    </div>
+  </header>
+
+  <footer class="footer">
+    <p>Built on <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> 2.3.2.</p>
+  </footer>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/cookies.min.js"></script><!-- For style switcher -->
+  <script src="assets/js/switcher.js"></script>
+
+  <script src="assets/google-code-prettify/prettify.js"></script>
+  <script src="assets/js/docs.js"></script>
+
+</body>
+</html>

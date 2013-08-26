@@ -1,0 +1,55 @@
+// Modified from Bootstrap
+
+//
+// Scaffolding
+// --------------------------------------------------
+
+
+// Body reset
+// -------------------------
+
+body {
+  background-color: $body-background;
+  color: $text-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  margin: 0;
+}
+
+
+// Links
+// -------------------------
+
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: $link-color-hover;
+  text-decoration: underline;
+}
+
+
+// Images
+// -------------------------
+
+// Rounded corners
+.img-rounded {
+  @include border-radius(6px);
+}
+
+// Add polaroid-esque trim
+.img-polaroid {
+  @include box-shadow(0 1px 3px rgba(black, .1));
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(black, .2);
+  padding: 4px;
+}
+
+// Perfect circle
+.img-circle {
+  @include border-radius(500px); // crank the border-radius so it works with most reasonably sized images
+}
